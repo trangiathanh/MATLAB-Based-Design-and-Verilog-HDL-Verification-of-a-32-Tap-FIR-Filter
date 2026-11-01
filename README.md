@@ -213,9 +213,9 @@ RMSE   = sqrt( (1/M) · Σ e\[n]² )      (M = 161 samples)
 |≥ 1500 Hz|< −50 dB (stopband)|
 |2500 Hz|≈ −65 to −67 dB|
 
-!\[Frequency response](https://raw.githubusercontent.com/trangiathanh/DGT302\_FIR-Filter/725a2f02a369544bc51b9098c2c59466e7433003/images/%C4%90%C3%A1p%20%E1%BB%A9ng%20t%E1%BA%A7n%20s%E1%BB%91%20(Frequency%20Response).png)
+![Frequency response](images/%C4%90%C3%A1p%20%E1%BB%A9ng%20t%E1%BA%A7n%20s%E1%BB%91%20(Frequency%20Response).png)
 
-!\[Signal before and after filtering](https://raw.githubusercontent.com/trangiathanh/DGT302\_FIR-Filter/3fc7d3f9aec371c5c955f9a89530c5983aea2633/images/T%C3%ADn%20hi%E1%BB%87u%20tr%C6%B0%E1%BB%9Bc%20v%C3%A0%20sau%20khi%20l%E1%BB%8Dc%20(Input%20\&%20Output%20Signal).png)
+![Signal before and after filtering](images/T%C3%ADn%20hi%E1%BB%87u%20tr%C6%B0%E1%BB%9Bc%20v%C3%A0%20sau%20khi%20l%E1%BB%8Dc%20(Input%20&%20Output%20Signal).png)
 
 **Observations:** before filtering, the signal peaks at about 0.7 + 0.5 = 1.2 and looks jagged. After filtering, only the **500 Hz** wave remains, with a peak of about 0.69, and the 2500 Hz component almost disappears. The first 2 ms or so is the transient period, while the filter is still "filling up" its 32 samples.
 
@@ -251,8 +251,7 @@ Check from ModelSim: `acc = 453445` → `453445 / 32768 ≈ 13.84` → drop the 
 
 The coefficients inside ModelSim were checked with the command `examine -radix decimal` and **match** `B\_Q15` from MATLAB (`h\[0] = −21`, `h\[1] = −60`, `h\[2] = −84`, `h\[3] = −52`, `h\[4] = 78`, `h\[27] = 78`, …).
 
-!\[ModelSim waveform](https://raw.githubusercontent.com/trangiathanh/DGT302\_FIR-Filter/30e541faba58b7c037dd909ab451a50e1a6e0376/images/D%E1%BA%A1ng%20s%C3%B3ng%20ModelSim.png)
-
+![ModelSim waveform](images/D%E1%BA%A1ng%20s%C3%B3ng%20ModelSim.png)
 Total simulation time for 161 samples: **1626 ns** (about 10 ns per sample).
 
 **Some output values** (scaled ×100):
@@ -278,10 +277,9 @@ The script `Compare\_FIR\_ModelSim.m` reads `fir\_output.txt`, divides it by `X\
 |Maximum absolute error|**0.00954506**|
 |RMSE|**0.00601066**|
 
-!\[MATLAB vs ModelSim comparison](https://raw.githubusercontent.com/trangiathanh/DGT302\_FIR-Filter/f88f70e9520303f12d9e95b0e728d2a69028a616/images/H%C3%ACnh%20%E1%BA%A3nh%20so%20s%C3%A1nh%20gi%E1%BB%AFa%20MATLAB%20v%C3%A0%20ModelSim.png)
+![MATLAB vs ModelSim comparison](images/H%C3%ACnh%20%E1%BA%A3nh%20so%20s%C3%A1nh%20gi%E1%BB%AFa%20MATLAB%20v%C3%A0%20ModelSim.png)
 
-!\[Absolute error](https://raw.githubusercontent.com/trangiathanh/DGT302\_FIR-Filter/f88f70e9520303f12d9e95b0e728d2a69028a616/images/H%C3%ACnh%20%E1%BA%A3nh%20sai%20s%E1%BB%91%20tuy%E1%BB%87t%20%C4%91%E1%BB%91i.png)
-
+![Absolute error](images/H%C3%ACnh%20%E1%BA%A3nh%20sai%20s%E1%BB%91%20tuy%E1%BB%87t%20%C4%91%E1%BB%91i.png)
 **Discussion**
 
 * The MATLAB curve (blue) and the ModelSim curve (red, dashed) almost overlap across all 161 samples, including the transient part.
