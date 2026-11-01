@@ -1,5 +1,4 @@
-# 🎛️ Thiết kế và mô phỏng bộ lọc âm thanh thông thấp FIR
-
+# 🎛️ MATLAB-Based Design and Verilog HDL Verification of a 32-Tap FIR Filter
 **MATLAB → Simulink → Verilog → ModelSim**
 
 Project môn **DGT302**: thiết kế bộ lọc **FIR thông thấp 32 hệ số** bằng phương pháp cửa sổ Hamming, kiểm chứng trên **MATLAB/Simulink**, hiện thực bằng **Verilog HDL** và so sánh kết quả mô phỏng **ModelSim** với MATLAB bằng các chỉ số **RMSE** và **sai số tuyệt đối lớn nhất**.
