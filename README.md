@@ -108,7 +108,8 @@ flowchart LR
 │   ├── FIR Filter for Audio Signals Based on FPGA,1999-5652-1-LE_1.pdf
 │   └── Practical FIR Filter Design in MATLAB -- Losada A_R.pdf
 ├── report/                             # Báo cáo
-│   └── DGT302_FIR_Filter.docx          # Báo cáo chi tiết (nên thêm bản .pdf)
+│   ├── DGT302_FIR_Filter.docx          # Báo cáo chi tiết
+│   └── DGT302_FIR_Filter.pdf           # Báo cáo chi tiết
 └── src/                                # Mã nguồn thiết kế và mô phỏng
     ├── matlab/                         # MATLAB & Simulink
     │   ├── Compare_FIR_ModelSim.m      # So sánh kết quả MATLAB và ModelSim (RMSE, Emax)
